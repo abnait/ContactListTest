@@ -1,0 +1,33 @@
+﻿XmlDocument doc = new XmlDocument();  
+doc.Load("file.xml");  
+XmlNode root = doc.DocumentElement;
+
+XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
+nsmgr.AddNamespace("bk", "urn:newbooks-schema"); 
+
+// 1
+XElements books =
+    books
+    .Root
+    .Elements("Book");
+
+// 2
+XElements booksWithIds =
+    books
+    .Root
+    .Elements("Book[type = "roman").Element("Title");
+
+    
+// 3
+XElements booksWithBd = 
+    books
+    .Root
+    .Elements("Book[type = "BD").Count();
+
+// 4
+ça retourne la balise Library : <library>
+		<book type="roman">
+			<title>toto5</title>
+			<author>titi</author>
+		</book>
+	</library>
