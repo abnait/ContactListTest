@@ -1,7 +1,9 @@
 # ContactListTest
 
-endpoints : 
-1- Get | Person/GetAll.
+endpoints :   
+
+1- Get | Person/GetAll. 
+
 2 - POST| Person/SavePerson
   JSON:
     {
